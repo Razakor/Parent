@@ -2,39 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="195dbec2-b6a8-4d2e-83c0-10afc78ebb23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Parser/src/main/java/com/razakor/task/parser/DatabaseSeed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/src/main/java/com/razakor/task/parser/Loader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/src/main/java/com/razakor/task/parser/ParserApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/Parser.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/main/java/DatabaseConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/main/java/DatabaseOperations.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/main/java/Hour.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/main/java/Loader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/main/java/Stop.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/main/java/Trolleybus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/target/classes/Hour.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/target/classes/Loader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/target/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/target/classes/Trolleybus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/ServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/ServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/bootstrap/BootStrapData.java" beforeDir="false" afterPath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/bootstrap/BootStrapData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/controllers/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/controllers/WebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/model/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/model/Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/model/Hours.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/model/Minutes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/model/Stops.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/model/Trolleybuses.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/repositories/HourRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/repositories/MinuteRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/repositories/StopRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/repositories/TrolleybusRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/services/TrolleybusService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/services/TrolleybusServiceImpl.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/src/main/java/com/razakor/task/entities/Times.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/src/main/java/com/razakor/task/repositories/TimesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1f6c8b24-1eba-4ddb-80d5-aa82d78ae5a8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1f6c8b24-1eba-4ddb-80d5-aa82d78ae5a8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/database.iml" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/database/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/java/com/razakor/task/entities/Hours.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/java/com/razakor/task/entities/Minutes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/java/com/razakor/task/entities/Stops.java" beforeDir="false" afterPath="$PROJECT_DIR$/database/src/main/java/com/razakor/task/entities/Stops.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/java/com/razakor/task/entities/Trolleybuses.java" beforeDir="false" afterPath="$PROJECT_DIR$/database/src/main/java/com/razakor/task/entities/Trolleybuses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/java/com/razakor/task/repositories/HourRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/src/main/java/com/razakor/task/repositories/MinuteRepository.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +55,27 @@
         <item name="taskdb" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="taskdb: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="stops: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="taskdb" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="taskdb: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="times: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="taskdb" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="taskdb: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="trolleybuses: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="taskdb" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="taskdb: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="trolleybuses_stops: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
@@ -86,12 +88,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Service" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -167,22 +170,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5abbb416" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@84f5465" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5abbb416" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@2747285f" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5abbb416" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@31117649" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5abbb416" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1b83a92" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@84f5465" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@627b4b5c" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -202,7 +195,8 @@
       <updated>1570618760284</updated>
       <workItem from="1570618762221" duration="11254000" />
       <workItem from="1570694894421" duration="15963000" />
-      <workItem from="1570712728509" duration="1102000" />
+      <workItem from="1570712728509" duration="2787000" />
+      <workItem from="1570779382725" duration="8283000" />
     </task>
     <servers />
   </component>
@@ -221,5 +215,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Parser/src/main/java/com/razakor/task/parser/Loader.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

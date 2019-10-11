@@ -1,25 +1,23 @@
 package com.razakor.task.entities;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.time.LocalTime;
 
 @Entity
-@Table(name = "hours")
-public class Hours {
+@Table(name = "times")
+public class Times {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id")
     private Integer id;
     @Column(name = "trolleybus_number")
     private String trolleybusNumber;
     @Column(name = "stop_name")
     private String stopName;
-    @Column(name = "val")
-    private String value;
+    @Column(name = "time")
+    private LocalTime time;
     @Column(name = "is_work_day")
     private Boolean isWorkDay;
-
-    @OneToMany(fetch = FetchType.EAGER, targetEntity = Minutes.class, mappedBy = "hour")
-    private Set<Minutes> minutes;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JoinColumn(name = "trolleybus_number", nullable = false, insertable = false, updatable = false)
@@ -29,14 +27,13 @@ public class Hours {
     @JoinColumn(name = "stop_name", nullable = false, insertable = false, updatable = false)
     private Stops stop;
 
-    public Hours() {
+    public Times() {
     }
 
-    public Hours(Integer id, String trolleybusNumber, String stopName, String value, Boolean isWorkDay) {
-        this.id = id;
+    public Times(String trolleybusNumber, String stopName, LocalTime time, Boolean isWorkDay) {
         this.trolleybusNumber = trolleybusNumber;
         this.stopName = stopName;
-        this.value = value;
+        this.time = time;
         this.isWorkDay = isWorkDay;
     }
 
@@ -64,12 +61,12 @@ public class Hours {
         this.stopName = stopName;
     }
 
-    public String getValue() {
-        return value;
+    public LocalTime getTime() {
+        return time;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setTime(LocalTime time) {
+        this.time = time;
     }
 
     public Boolean getWorkDay() {
@@ -78,14 +75,6 @@ public class Hours {
 
     public void setWorkDay(Boolean workDay) {
         isWorkDay = workDay;
-    }
-
-    public Set<Minutes> getMinutes() {
-        return minutes;
-    }
-
-    public void setMinutes(Set<Minutes> minutes) {
-        this.minutes = minutes;
     }
 
     public Trolleybuses getTrolleybus() {

@@ -19,7 +19,7 @@ public class Trolleybuses {
     private Set<Stops> stops;
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "trolleybus")
-    private Set<Hours> hours;
+    private Set<Times> times;
 
     public Trolleybuses() {
     }
@@ -53,12 +53,12 @@ public class Trolleybuses {
         this.stops = stops;
     }
 
-    public Set<Hours> getHours() {
-        return hours;
+    public Set<Times> getTimes() {
+        return times;
     }
 
-    public void setHours(Set<Hours> hours) {
-        this.hours = hours;
+    public void setTimes(Set<Times> times) {
+        this.times = times;
     }
 
     @Override

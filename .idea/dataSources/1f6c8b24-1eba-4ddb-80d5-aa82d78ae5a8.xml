@@ -1117,188 +1117,139 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="281" parent="7" name="hours"/>
-    <table id="282" parent="7" name="minutes"/>
-    <table id="283" parent="7" name="stops"/>
+    <table id="281" parent="7" name="hibernate_sequence">
+      <Engine>MyISAM</Engine>
+    </table>
+    <table id="282" parent="7" name="stops"/>
+    <table id="283" parent="7" name="times"/>
     <table id="284" parent="7" name="trolleybuses"/>
     <table id="285" parent="7" name="trolleybuses_stops"/>
-    <column id="286" parent="281" name="id">
+    <column id="286" parent="281" name="next_val">
       <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="281" name="trolleybus_number">
-      <Position>2</Position>
-      <DataType>varchar(2)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="288" parent="281" name="stop_name">
-      <Position>3</Position>
+    <column id="287" parent="282" name="name">
+      <Position>1</Position>
       <DataType>varchar(80)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="281" name="val">
-      <Position>4</Position>
-      <DataType>varchar(45)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="290" parent="281" name="is_work_day">
-      <Position>5</Position>
-      <DataType>tinyint(4)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="291" parent="281" name="id_UNIQUE">
-      <ColNames>id</ColNames>
+    <index id="288" parent="282" name="name_UNIQUE">
+      <ColNames>name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="292" parent="281" name="FKrreu4k1tej54t0doroj2i8ulb">
-      <ColNames>trolleybus_number</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="293" parent="281" name="FKhxhuo13jgwaqtngnpn8fbugg">
+    <key id="289" parent="282" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>name</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="290" parent="282" name="name_UNIQUE">
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>name_UNIQUE</UnderlyingIndexName>
+    </key>
+    <column id="291" parent="283" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="292" parent="283" name="is_work_day">
+      <Position>2</Position>
+      <DataType>bit(1)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="293" parent="283" name="stop_name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="294" parent="283" name="time">
+      <Position>4</Position>
+      <DataType>time|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="295" parent="283" name="trolleybus_number">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="296" parent="283" name="stop_name_fk_idx">
       <ColNames>stop_name</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="294" parent="281" name="PRIMARY">
+    <index id="297" parent="283" name="trolleybus_number_fk_idx">
+      <ColNames>trolleybus_number</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="298" parent="283" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="295" parent="281" name="id_UNIQUE">
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
-    </key>
-    <foreign-key id="296" parent="281" name="FKrreu4k1tej54t0doroj2i8ulb">
-      <ColNames>trolleybus_number</ColNames>
-      <RefTableName>trolleybuses</RefTableName>
-      <RefColNames>number</RefColNames>
-    </foreign-key>
-    <foreign-key id="297" parent="281" name="FKhxhuo13jgwaqtngnpn8fbugg">
+    <foreign-key id="299" parent="283" name="stop_name_fk">
       <ColNames>stop_name</ColNames>
       <RefTableName>stops</RefTableName>
       <RefColNames>name</RefColNames>
     </foreign-key>
-    <column id="298" parent="282" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="299" parent="282" name="hour_id">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="300" parent="282" name="val">
-      <Position>3</Position>
-      <DataType>varchar(45)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="301" parent="282" name="id_UNIQUE">
-      <ColNames>id</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <index id="302" parent="282" name="FKqrlopf2ey19n17nk3gjveta4i">
-      <ColNames>hour_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="303" parent="282" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <key id="304" parent="282" name="id_UNIQUE">
-      <ColNames>id</ColNames>
-      <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
-    </key>
-    <foreign-key id="305" parent="282" name="FKqrlopf2ey19n17nk3gjveta4i">
-      <ColNames>hour_id</ColNames>
-      <RefTableName>hours</RefTableName>
-      <RefColNames>id</RefColNames>
+    <foreign-key id="300" parent="283" name="trolleybus_number_fk">
+      <ColNames>trolleybus_number</ColNames>
+      <RefTableName>trolleybuses</RefTableName>
+      <RefColNames>number</RefColNames>
     </foreign-key>
-    <column id="306" parent="283" name="name">
-      <Position>1</Position>
-      <DataType>varchar(80)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="307" parent="283" name="name_UNIQUE">
-      <ColNames>name</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <key id="308" parent="283" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>name</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <key id="309" parent="283" name="name_UNIQUE">
-      <ColNames>name</ColNames>
-      <UnderlyingIndexName>name_UNIQUE</UnderlyingIndexName>
-    </key>
-    <column id="310" parent="284" name="number">
+    <column id="301" parent="284" name="number">
       <Position>1</Position>
       <DataType>varchar(2)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="284" name="name">
+    <column id="302" parent="284" name="name">
       <Position>2</Position>
       <DataType>varchar(80)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="312" parent="284" name="number_UNIQUE">
+    <index id="303" parent="284" name="number_UNIQUE">
       <ColNames>number</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="313" parent="284" name="PRIMARY">
+    <key id="304" parent="284" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>number</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="314" parent="284" name="number_UNIQUE">
+    <key id="305" parent="284" name="number_UNIQUE">
       <ColNames>number</ColNames>
       <UnderlyingIndexName>number_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="315" parent="285" name="trolleybus">
+    <column id="306" parent="285" name="trolleybus">
       <Position>1</Position>
       <DataType>varchar(2)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="285" name="stop">
+    <column id="307" parent="285" name="stop">
       <Position>2</Position>
       <DataType>varchar(80)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="317" parent="285" name="trolleybus_fk_idx">
+    <index id="308" parent="285" name="trolleybus_fk_idx">
       <ColNames>trolleybus</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="318" parent="285" name="stop_fk_idx">
+    <index id="309" parent="285" name="stop_fk_idx">
       <ColNames>stop</ColNames>
       <Type>btree</Type>
     </index>
-    <foreign-key id="319" parent="285" name="trolleybus_fk">
+    <foreign-key id="310" parent="285" name="trolleybus_fk">
       <ColNames>trolleybus</ColNames>
       <RefTableName>trolleybuses</RefTableName>
       <RefColNames>number</RefColNames>
     </foreign-key>
-    <foreign-key id="320" parent="285" name="stop_fk">
+    <foreign-key id="311" parent="285" name="stop_fk">
       <ColNames>stop</ColNames>
       <RefTableName>stops</RefTableName>
       <RefColNames>name</RefColNames>

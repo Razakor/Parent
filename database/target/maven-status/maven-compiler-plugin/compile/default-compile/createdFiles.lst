@@ -1,0 +1,6 @@
+com\razakor\task\repositories\TimesRepository.class
+com\razakor\task\entities\Stops.class
+com\razakor\task\entities\Trolleybuses.class
+com\razakor\task\repositories\StopRepository.class
+com\razakor\task\repositories\TrolleybusRepository.class
+com\razakor\task\entities\Times.class

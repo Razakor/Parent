@@ -6,16 +6,11 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.*;
-import com.razakor.task.entities.*;
+import com.razakor.task.documents.*;
 
 class Loader {
     private static Set<Trolleybuses> trolleybuses = new HashSet<>();
-    private static Set<Stops> stops = new HashSet<>();
-    private static Set<Hours> hours = new HashSet<>();
-    private static Set<Minutes> minutes = new HashSet<>();
     private static Map<String, String> urls = new HashMap<>();
-    private static Hours hour;
-    private static Integer i = 1;
 
     static {
         urls.put("1", "https://vn.rozklad.in.ua/home/schedule/48");
@@ -36,14 +31,13 @@ class Loader {
     }
 
     static void  load() {
-        urls.forEach((trolleybusNumber, url) -> {
+        urls.entrySet().parallelStream().forEach(url -> {
             try {
-                Document document = Jsoup.connect(url).get();
-                Trolleybuses trolleybus = new Trolleybuses(trolleybusNumber, document.title());
-                trolleybus.setStops(new HashSet<>());
+                Document document = Jsoup.connect(url.getValue()).get();
+                Trolleybuses trolleybus = new Trolleybuses(url.getKey(), document.title());
                 trolleybuses.add(trolleybus);
-                loadStops(trolleybus, url, document);
-                System.out.println("Trolleybus loaded");
+                loadStops(trolleybus, url.getValue(), document);
+                System.out.println(trolleybus.getName());
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -61,26 +55,13 @@ class Loader {
             String stopUrl = url + '/' + s;
             String name = l.select("p").text();
             Stops stop = new Stops(name);
-            if(stops.contains(stop)) {
-                for(Stops stp : stops) {
-                    if (stp.equals(stop)) {
-                        stop = stp;
-                        break;
-                    }
-                }
-            } else {
-                stops.add(stop);
-                stop.setTrolleybuses(new HashSet<>());
-                stop.setHours(new HashSet<>());
-            }
             trolleybus.getStops().add(stop);
-            stop.getTrolleybuses().add(trolleybus);
-            loadWorkDaysHours(trolleybus, stop, stopUrl);
-            loadWeekendHours(trolleybus, stop, stopUrl);
+            loadWorkDayTimes(stop, stopUrl);
+            loadWeekendTimes(stop, stopUrl);
         }
     }
 
-    private static void loadWorkDaysHours(Trolleybuses trolleybus, Stops stop, String url) {
+    private static void loadWorkDayTimes(Stops stop, String url) {
         try {
             Document stopDocument = Jsoup.connect(url).get();
             Element table = stopDocument.select("table").get(0);
@@ -89,25 +70,14 @@ class Loader {
             for (Element row : rows) {
                 Elements cols = row.select("td");
                 if (cols.isEmpty()) continue;
-                if (!cols.get(0).text().equals("")) {
-                    String value = cols.get(0).text();
-                    hour = new Hours(i, trolleybus.getNumber(), stop.getName(), value, true);
-                    i++;
-                    hour.setMinutes(new HashSet<>());
-                    hour.setTrolleybus(trolleybus);
-                    hour.setStop(stop);
-                    stop.getHours().add(hour);
-                    hours.add(hour);
-                }
-                setMinutes(cols);
+                setTimes(cols, stop, true);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
-    private static void loadWeekendHours(Trolleybuses trolleybus, Stops stop, String url) {
+    private static void loadWeekendTimes(Stops stop, String url) {
         try {
             Document stopDocument = Jsoup.connect(url).get();
             Element table = stopDocument.select("table").get(0);
@@ -119,47 +89,38 @@ class Loader {
                 if (cols.get(0).text().equals("Маршрут не працює в ці дні")) {
                     return;
                 }
-                if (!cols.get(0).text().equals("")) {
-                    String value = cols.get(0).text();
-                    hour = new Hours(i, trolleybus.getNumber(), stop.getName(), value, false);
-                    i++;
-                    hour.setMinutes(new HashSet<>());
-                    hour.setTrolleybus(trolleybus);
-                    hour.setStop(stop);
-                    stop.getHours().add(hour);
-                    hours.add(hour);
-                }
-                setMinutes(cols);
+                setTimes(cols, stop, false);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private static void setMinutes(Elements cols) {
-        for (int i = 1; i < cols.size(); i++) {
-            if (!cols.get(i).text().equals("")) {
-                String value = cols.get(i).text();
-                Minutes minute = new Minutes(hour.getId(), value);
-                minute.setHour(hour);
-                minutes.add(minute);
-            }
+    private static void setTimes(Elements cols, Stops stop, boolean isWorkDay) {
+        if (!cols.get(0).text().equals("")) {
+            String value = cols.get(0).text();
+            Hour hour = new Hour(value);
+            hour.setMinutes(getMinutes(cols));
+
+            hour.getTime().forEach(val -> {
+                Times time = new Times(val, isWorkDay);
+                stop.getTimes().add(time);
+            });
         }
     }
 
+    private static List<String> getMinutes(Elements cols) {
+        List<String> minutes = new ArrayList<>();
+        for (int i = 1; i < cols.size(); i++) {
+            if (!cols.get(i).text().equals("")) {
+                minutes.add(cols.get(i).text());
+            }
+        }
+        return minutes;
+    }
+
+
     static Set<Trolleybuses> getTrolleybuses() {
         return trolleybuses;
-    }
-
-    static Set<Stops> getStops() {
-        return stops;
-    }
-
-    static Set<Hours> getHours() {
-        return hours;
-    }
-
-    static Set<Minutes> getMinutes() {
-        return minutes;
     }
 }

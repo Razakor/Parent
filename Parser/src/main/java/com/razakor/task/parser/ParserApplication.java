@@ -3,10 +3,10 @@ package com.razakor.task.parser;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-@EnableJpaRepositories(basePackages = "com.razakor.task.repositories")
-@EntityScan(basePackages = "com.razakor.task.entities")
+@EnableMongoRepositories(basePackages = "com.razakor.task.mongorepositories")
+@EntityScan(basePackages = "com.razakor.task.documents")
 @SpringBootApplication
 public class ParserApplication {
     public static void main(String[] args) {

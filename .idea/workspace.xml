@@ -1,72 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="195dbec2-b6a8-4d2e-83c0-10afc78ebb23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_9_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_3_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongo_java_driver_3_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_3_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_3_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_2_1_10_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_2_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_0_RC2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_0_RC2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_0_RC2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_0_RC2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_0_RC2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_0_RC2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_0_RC2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_2_0_RC2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_0_RC2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mongodb/mongodb.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mongodb/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/documents/Stops.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/documents/Times.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/documents/Trolleybuses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/mongorepositories/StopRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/mongorepositories/TimesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/mongorepositories/TrolleybusRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Service_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Service_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_4_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_3_10_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_23_2_GA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_1_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_2_1_6_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_1_8_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_9_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="195dbec2-b6a8-4d2e-83c0-10afc78ebb23" name="Default Changelist" comment="working only insert into database">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/database.iml" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/database/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/target/classes/com/razakor/task/entities/Hours.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/target/classes/com/razakor/task/entities/Minutes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/target/classes/com/razakor/task/entities/Stops.class" beforeDir="false" afterPath="$PROJECT_DIR$/database/target/classes/com/razakor/task/entities/Stops.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/target/classes/com/razakor/task/entities/Trolleybuses.class" beforeDir="false" afterPath="$PROJECT_DIR$/database/target/classes/com/razakor/task/entities/Trolleybuses.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/target/classes/com/razakor/task/repositories/HourRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/target/classes/com/razakor/task/repositories/MinuteRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/target/classes/com/razakor/task/repositories/StopRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/database/target/classes/com/razakor/task/repositories/StopRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/target/classes/com/razakor/task/repositories/TrolleybusRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/database/target/classes/com/razakor/task/repositories/TrolleybusRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/target/test-classes/com/razakor/task/AppTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/documents/Stops.java" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/documents/Stops.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/documents/Times.java" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/documents/Times.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/documents/Trolleybuses.java" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/documents/Trolleybuses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/mongorepositories/StopRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/mongorepositories/TimesRepository.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -169,6 +110,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/repositories" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -247,7 +189,7 @@
       <workItem from="1570694894421" duration="15963000" />
       <workItem from="1570712728509" duration="2787000" />
       <workItem from="1570779382725" duration="13015000" />
-      <workItem from="1571126247231" duration="15311000" />
+      <workItem from="1571126247231" duration="20101000" />
     </task>
     <task id="LOCAL-00001" summary="reworked database">
       <created>1570787784969</created>
@@ -256,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570787784970</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="working only insert into database">
+      <created>1571142190377</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571142190378</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +226,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="reworked database" />
-    <option name="LAST_COMMIT_MESSAGE" value="reworked database" />
+    <MESSAGE value="working only insert into database" />
+    <option name="LAST_COMMIT_MESSAGE" value="working only insert into database" />
   </component>
 </project>

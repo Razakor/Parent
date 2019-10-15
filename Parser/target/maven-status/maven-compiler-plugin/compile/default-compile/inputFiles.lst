@@ -1,7 +1,4 @@
-D:\Project\parent\Parser\src\main\java\DatabaseOperations.java
-D:\Project\parent\Parser\src\main\java\Hour.java
-D:\Project\parent\Parser\src\main\java\Loader.java
-D:\Project\parent\Parser\src\main\java\Main.java
-D:\Project\parent\Parser\src\main\java\Stop.java
-D:\Project\parent\Parser\src\main\java\Trolleybus.java
-D:\Project\parent\Parser\src\main\java\DatabaseConnection.java
+D:\Project\parent\Parser\src\main\java\com\razakor\task\parser\Loader.java
+D:\Project\parent\Parser\src\main\java\com\razakor\task\parser\DatabaseSeed.java
+D:\Project\parent\Parser\src\main\java\com\razakor\task\parser\ParserApplication.java
+D:\Project\parent\Parser\src\main\java\com\razakor\task\parser\Hour.java

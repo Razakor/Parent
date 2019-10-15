@@ -1,7 +1,4 @@
-Main.class
-DatabaseConnection.class
-Hour.class
-Trolleybus.class
-Loader.class
-DatabaseOperations.class
-Stop.class
+com\razakor\task\parser\DatabaseSeed.class
+com\razakor\task\parser\Hour.class
+com\razakor\task\parser\ParserApplication.class
+com\razakor\task\parser\Loader.class

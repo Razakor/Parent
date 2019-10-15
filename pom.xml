@@ -77,6 +77,7 @@
     <module>Parser</module>
     <module>Service</module>
     <module>database</module>
+    <module>mongodb</module>
   </modules>
 
 </project>

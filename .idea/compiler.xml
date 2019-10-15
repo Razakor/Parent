@@ -9,10 +9,12 @@
         <module name="database" />
         <module name="Parser" />
         <module name="Service" />
+        <module name="mongodb" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="database" target="8" />
+      <module name="mongodb" target="8" />
       <module name="parent" target="1.7" />
       <module name="Parser" target="1.8" />
       <module name="Service" target="1.8" />

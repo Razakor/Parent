@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="195dbec2-b6a8-4d2e-83c0-10afc78ebb23" name="Default Changelist" comment="working only insert into database">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Parser/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/service/TrolleybusService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/documents/Stops.java" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/documents/Stops.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/documents/Times.java" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/documents/Times.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/documents/Trolleybuses.java" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/documents/Trolleybuses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/mongorepositories/StopRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/mongorepositories/TimesRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/bootstrap/BootStrapData.java" beforeDir="false" afterPath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/bootstrap/BootStrapData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/controllers/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/controllers/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/mongorepositories/TrolleybusRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/mongorepositories/TrolleybusRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongodb/target/classes/com/razakor/task/mongorepositories/TrolleybusRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/target/classes/com/razakor/task/mongorepositories/TrolleybusRepository.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,9 +83,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="spring-beans.schema" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -107,18 +110,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/repositories" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Parser" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.razakor.task.service.service" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\parent\Parser" />
+      <recent name="D:\Project\parent" />
       <recent name="D:\Project\parent\mongodb\src\main\java\com\razakor\task\repositories" />
       <recent name="D:\Project\parent\mongodb\src\main\java\com\razakor\task\documents" />
       <recent name="D:\Project\parent\Parser\src\main\resources" />
-      <recent name="D:\Project\parent\database\src\main\java\com\razakor\task\repositories" />
-      <recent name="D:\Project\parent\database\src\main\java\com\razakor\task\entities" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -189,7 +196,8 @@
       <workItem from="1570694894421" duration="15963000" />
       <workItem from="1570712728509" duration="2787000" />
       <workItem from="1570779382725" duration="13015000" />
-      <workItem from="1571126247231" duration="20101000" />
+      <workItem from="1571126247231" duration="21970000" />
+      <workItem from="1571211668838" duration="10616000" />
     </task>
     <task id="LOCAL-00001" summary="reworked database">
       <created>1570787784969</created>
@@ -225,6 +233,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/Parser" />
+      <path value="$PROJECT_DIR$/Service" />
+      <path value="$PROJECT_DIR$/Servise" />
+    </ignored-roots>
     <MESSAGE value="reworked database" />
     <MESSAGE value="working only insert into database" />
     <option name="LAST_COMMIT_MESSAGE" value="working only insert into database" />

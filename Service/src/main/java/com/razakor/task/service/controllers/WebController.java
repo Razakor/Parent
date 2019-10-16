@@ -1,7 +1,7 @@
 package com.razakor.task.service.controllers;
 
 import com.razakor.task.documents.*;
-import com.razakor.task.service.model.Data;
+import com.razakor.task.service.service.TrolleybusService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +15,12 @@ import java.util.stream.Collectors;
 @Controller
 public class WebController {
 
+    private final TrolleybusService trolleybusService;
+
+    public WebController(TrolleybusService trolleybusService) {
+        this.trolleybusService = trolleybusService;
+    }
+
     @GetMapping()
     public String main(Model model) {
         List<String> hollow = new ArrayList<>();
@@ -22,24 +28,15 @@ public class WebController {
         return "main";
     }
 
-
     @PostMapping()
     public String add(@RequestParam String firstStop, @RequestParam String secondStop, Model model) {
-        List<Trolleybuses> trolleybuses = Data.trolleybuses;
 
-        trolleybuses = trolleybuses.stream().filter(trolleybus ->
-                trolleybus.getStops().stream().anyMatch(stop ->
-                        stop.getName().equals(firstStop)) &&
-                        trolleybus.getStops().stream().anyMatch(stop ->
-                                stop.getName().equals(secondStop))).collect(Collectors.toList());
-
+        List<Trolleybuses> trolleybuses = trolleybusService.getTrolleybusesWithStops(firstStop, secondStop);
         LocalTime localTime = LocalTime.now();
         int currentHour = localTime.getHour();
         int currentMinute = localTime.getMinute();
 
-
         List<String> scheduleList = new ArrayList<>();
-
 
         trolleybuses.forEach(trolleybus -> {
             scheduleList.add(trolleybus.getName());

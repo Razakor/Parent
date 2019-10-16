@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="195dbec2-b6a8-4d2e-83c0-10afc78ebb23" name="Default Changelist" comment="working only insert into database">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/service/TrolleybusService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="195dbec2-b6a8-4d2e-83c0-10afc78ebb23" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/bootstrap/BootStrapData.java" beforeDir="false" afterPath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/bootstrap/BootStrapData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/controllers/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/controllers/WebController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/mongorepositories/TrolleybusRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/src/main/java/com/razakor/task/mongorepositories/TrolleybusRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongodb/target/classes/com/razakor/task/mongorepositories/TrolleybusRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/target/classes/com/razakor/task/mongorepositories/TrolleybusRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service/src/main/java/com/razakor/task/service/bootstrap/BootStrapData.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +190,7 @@
       <workItem from="1570712728509" duration="2787000" />
       <workItem from="1570779382725" duration="13015000" />
       <workItem from="1571126247231" duration="21970000" />
-      <workItem from="1571211668838" duration="10616000" />
+      <workItem from="1571211668838" duration="11628000" />
     </task>
     <task id="LOCAL-00001" summary="reworked database">
       <created>1570787784969</created>
@@ -213,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571142190378</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactored to queries">
+      <created>1571225369765</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571225369765</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +240,7 @@
     </ignored-roots>
     <MESSAGE value="reworked database" />
     <MESSAGE value="working only insert into database" />
-    <option name="LAST_COMMIT_MESSAGE" value="working only insert into database" />
+    <MESSAGE value="refactored to queries" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored to queries" />
   </component>
 </project>

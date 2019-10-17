@@ -10,6 +10,8 @@ import com.razakor.task.documents.*;
 
 class Loader {
     private static Set<Trolleybuses> trolleybuses = new HashSet<>();
+    private static Set<Stops> stops = new HashSet<>();
+    private static Set<Times> times = new HashSet<>();
     private static Map<String, String> urls = new HashMap<>();
 
     static {
@@ -54,14 +56,15 @@ class Loader {
             s = s.substring(s.indexOf(' ') + 1);
             String stopUrl = url + '/' + s;
             String name = l.select("p").text();
-            Stops stop = new Stops(name);
+            Stops stop = new Stops(name, trolleybus.getNumber());
             trolleybus.getStops().add(stop);
-            loadWorkDayTimes(stop, stopUrl);
-            loadWeekendTimes(stop, stopUrl);
+            stops.add(stop);
+            loadWorkDayTimes(trolleybus, stop, stopUrl);
+            loadWeekendTimes(trolleybus, stop, stopUrl);
         }
     }
 
-    private static void loadWorkDayTimes(Stops stop, String url) {
+    private static void loadWorkDayTimes(Trolleybuses trolleybus, Stops stop, String url) {
         try {
             Document stopDocument = Jsoup.connect(url).get();
             Element table = stopDocument.select("table").get(0);
@@ -70,17 +73,17 @@ class Loader {
             for (Element row : rows) {
                 Elements cols = row.select("td");
                 if (cols.isEmpty()) continue;
-                setTimes(cols, stop, true);
+                setTimes(cols, trolleybus, stop, true);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private static void loadWeekendTimes(Stops stop, String url) {
+    private static void loadWeekendTimes(Trolleybuses trolleybus, Stops stop, String url) {
         try {
             Document stopDocument = Jsoup.connect(url).get();
-            Element table = stopDocument.select("table").get(0);
+            Element table = stopDocument.select("table").get(1);
             Elements rows = table.select("tr");
 
             for (Element row : rows) {
@@ -89,22 +92,23 @@ class Loader {
                 if (cols.get(0).text().equals("Маршрут не працює в ці дні")) {
                     return;
                 }
-                setTimes(cols, stop, false);
+                setTimes(cols, trolleybus, stop, false);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private static void setTimes(Elements cols, Stops stop, boolean isWorkDay) {
+    private static void setTimes(Elements cols, Trolleybuses trolleybus, Stops stop, boolean isWorkDay) {
         if (!cols.get(0).text().equals("")) {
             String value = cols.get(0).text();
             Hour hour = new Hour(value);
             hour.setMinutes(getMinutes(cols));
 
             hour.getTime().forEach(val -> {
-                Times time = new Times(val, isWorkDay);
+                Times time = new Times(trolleybus.getNumber(), stop.getName(), val, isWorkDay);
                 stop.getTimes().add(time);
+                times.add(time);
             });
         }
     }
@@ -119,8 +123,15 @@ class Loader {
         return minutes;
     }
 
-
     static Set<Trolleybuses> getTrolleybuses() {
         return trolleybuses;
+    }
+
+    public static Set<Stops> getStops() {
+        return stops;
+    }
+
+    public static Set<Times> getTimes() {
+        return times;
     }
 }

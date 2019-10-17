@@ -5,8 +5,8 @@
 </head>
     <body>
     <form method="post">
-        <input type="text" name="firstStop" placeholder="Введіть назву зупинки" />
-        <input type="text" name="secondStop" placeholder="Введіть назву місця призначення">
+        <input type="text" name="firstStopName" placeholder="Введіть назву зупинки" />
+        <input type="text" name="secondStopName" placeholder="Введіть назву місця призначення">
         <button type="submit">Знайти</button>
     </form>
     <#list schedule as trolleybus>

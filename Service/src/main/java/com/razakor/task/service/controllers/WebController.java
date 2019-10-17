@@ -1,24 +1,29 @@
 package com.razakor.task.service.controllers;
 
 import com.razakor.task.documents.*;
+import com.razakor.task.service.service.StopService;
+import com.razakor.task.service.service.TimeService;
 import com.razakor.task.service.service.TrolleybusService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @Controller
 public class WebController {
 
     private final TrolleybusService trolleybusService;
+    private final StopService stopService;
+    private final TimeService timeService;
 
-    public WebController(TrolleybusService trolleybusService) {
+    public WebController(TrolleybusService trolleybusService,
+                         StopService stopService,
+                         TimeService timeService) {
         this.trolleybusService = trolleybusService;
+        this.stopService = stopService;
+        this.timeService = timeService;
     }
 
     @GetMapping()
@@ -29,9 +34,9 @@ public class WebController {
     }
 
     @PostMapping()
-    public String add(@RequestParam String firstStop, @RequestParam String secondStop, Model model) {
+    public String add(@RequestParam String firstStopName, @RequestParam String secondStopName, Model model) {
 
-        List<Trolleybuses> trolleybuses = trolleybusService.getTrolleybusesWithStops(firstStop, secondStop);
+        List<Trolleybuses> trolleybuses = trolleybusService.getTrolleybusesWithStops(firstStopName, secondStopName);
         LocalTime localTime = LocalTime.now();
         int currentHour = localTime.getHour();
         int currentMinute = localTime.getMinute();
@@ -40,39 +45,22 @@ public class WebController {
 
         trolleybuses.forEach(trolleybus -> {
             scheduleList.add(trolleybus.getName());
-            trolleybus.getStops().stream().filter(s -> s.getName().equals(firstStop)).forEach(stop -> {
-                if (stop.getName().equals(firstStop)) {
-                    setTime(stop.getTimes(), true, "Робочі дні", scheduleList, currentHour, currentMinute);
-                    setTime(stop.getTimes(), false, "Вихідні дні", scheduleList, currentHour, currentMinute);
-                }
-            });
+            Stops stop = stopService.getStopsByTrolleybusNumberAndName(trolleybus.getNumber(), firstStopName);
+            setTime(trolleybus.getNumber(), stop.getName(), true, "Робочі дні", scheduleList, currentHour, currentMinute);
+            setTime(trolleybus.getNumber(), stop.getName(), false, "Вихідні дні", scheduleList, currentHour, currentMinute);
         });
 
         model.addAttribute("schedule", scheduleList);
         return "main";
     }
 
-    private void setTime(Set<Times> allTimes, boolean isWorkDay, String message, List<String> scheduleList, int currentHour, int currentMinute) {
+    private void setTime(String trolleybusNumber, String stopName, boolean isWorkDay, String message, List<String> scheduleList, int currentHour, int currentMinute) {
         scheduleList.add(message);
+
+        List<Times> times = timeService.getTimes(trolleybusNumber, stopName, isWorkDay, LocalTime.now(), LocalTime.now().plusHours(1));
+
         StringBuilder stringBuilder = new StringBuilder();
-
-        Set<Times> times;
-        if (isWorkDay) {
-            times = allTimes.stream().filter(Times::getWorkDay).collect(Collectors.toSet());
-        } else {
-            times = allTimes.stream().filter(time -> !time.getWorkDay()).collect(Collectors.toSet());
-        }
-
-
-        times.stream().sorted(Comparator.comparingInt(c ->
-                c.getTime().toSecondOfDay())).forEach(time -> {
-            int hour = time.getTime().getHour();
-            int minute = time.getTime().getMinute();
-            if (hour == currentHour  && minute > currentMinute || hour == currentHour + 1) {
-                stringBuilder.append(LocalTime.of(hour, minute)).append(", ");
-            }
-        });
-
+        times.forEach(time -> stringBuilder.append(time.getTime()).append(", "));
         stringBuilder.delete(stringBuilder.length() - 2, stringBuilder.length());
         scheduleList.add(stringBuilder.toString());
     }

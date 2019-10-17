@@ -12,7 +12,4 @@ public interface TrolleybusRepository extends MongoRepository<Trolleybuses, Stri
 
     @Query("{'stops.name': {$all: [?0, ?1]}}")
     List<Trolleybuses> findTrolleybusesByStopNames(String firstStopName, String secondStopName);
-
-
-
 }
